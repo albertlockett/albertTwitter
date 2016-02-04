@@ -1,0 +1,52 @@
+/* new tweet form */
+
+#newTweetForm {
+	width:90%;
+	border:1px solid #62A5B2;
+	background:white;
+	margin:auto;	
+}
+
+#newTweetForm table {
+	width:100%;
+	border-radius:5px;
+}
+
+#newTweetForm #tweetContent {
+	font-size:1.2em;
+	border-radius:5px;
+	color:#333333;
+}
+
+#newTweetForm #tweetButton {
+	font-size:1.2em;
+	background-color:#62A5B2;
+	color:white;
+	border:none;
+	border-radius:5px;
+}
+
+/* tweet display */
+.tweetTable {
+	margin:auto;
+	width:90%;
+	background:white;
+	border:1px solid #62A5B2;
+	border-radius:5px;
+}
+
+.tweetTable .username{
+	color:#B27D50;
+	font-weight: bold;
+	font-size:0.8em;
+}
+
+.tweetTable .time {
+	color:#B27D50;
+	font-size: 0.6em;
+}
+
+.tweetTable .content {
+	font-size:0.9em;
+	color:#222222;
+}

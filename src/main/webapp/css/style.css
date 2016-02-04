@@ -1,0 +1,15 @@
+
+html {
+	background:#62A5B2;
+}
+
+body {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	width:900px;
+	align:center;
+	margin:auto;
+	padding-left:20px;
+	padding-right:20px;
+	background:#BFF4FF;
+	min-height:700px;
+}
