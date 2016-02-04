@@ -4,7 +4,7 @@
 <hibernate-mapping>
     <class name="ca.albertlockett.alberttwitter.model.User" table="USERS">
         <id name="userId" type="long">
-        	<column name="TWEET_ID" precision="22" scale="0"/>
+        	<column name="USER_ID" precision="22" scale="0"/>
         	<generator class="sequence">
         		<param name="sequence">SEQ_USER_ID</param>
         	</generator>

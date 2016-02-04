@@ -14,6 +14,8 @@
 		href="<spring:url value="/css/tweets.css"/>">
 </head>
 <body>
+	<a href="login.html">Logout</a>
+
 	<div id="newTweetContainer">
 		<br>
 		<form id="newTweetForm" action="newTweet.html" method="POST">

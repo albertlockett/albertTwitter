@@ -13,3 +13,20 @@ body {
 	background:#BFF4FF;
 	min-height:700px;
 }
+
+
+.errorField  {
+	border:1px solid red;
+}
+
+.errorLabel {
+	font-weight:bold;
+	font-style:italic;
+	color:red;
+}
+
+.errorMessage {
+	font-size:x-small;
+	font-style:italic;
+	color:red;
+}

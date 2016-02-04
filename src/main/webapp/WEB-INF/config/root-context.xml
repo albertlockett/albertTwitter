@@ -19,17 +19,13 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean name="tweetDao" class="ca.albertlockett.alberttwitter.dao.TweetDaoHibernateImpl">
-		<property name="sessionFactory" ref="sessionFactory"/>
-	</bean>
-	
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingResources">
 			<list>
 				<value>ca/albertlockett/alberttwitter/dao/model/Tweet.hbm.xml</value>
-				<value>ca/albertlockett/alberttwitter/dao/model/USer.hbm.xml</value>
+				<value>ca/albertlockett/alberttwitter/dao/model/User.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -39,5 +35,14 @@
 			</props>
 		</property>
 	</bean>
+	
+	<!-- DAO BEANS -->
+	<bean name="tweetDao" class="ca.albertlockett.alberttwitter.dao.TweetDaoHibernateImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean name="userDao" class="ca.albertlockett.alberttwitter.dao.UserDaoHibernateImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
 
 </beans>
