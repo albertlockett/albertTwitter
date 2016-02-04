@@ -6,6 +6,8 @@ import ca.albertlockett.alberttwitter.model.Tweet;
 
 public interface TweetService {
 
+	public void saveTweet(Tweet tweet);
+	
 	public List<Tweet> loadTweets();
 	
 }

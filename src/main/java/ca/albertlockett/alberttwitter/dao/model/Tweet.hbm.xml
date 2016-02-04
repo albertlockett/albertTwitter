@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ca.albertlockett.alberttwitter.model.Tweet" table="TWEETS">
+        <id name="tweetId" type="long">
+        	<column name="TWEET_ID" precision="22" scale="0"/>
+        	<generator class="sequence">
+        		<param name="sequence">SEQ_TWEET_ID</param>
+        	</generator>
+        </id>
+        <property name="content" type="string">
+        	<column name="content" length="141"/>
+        </property>
+        <property name="time" type="timestamp">
+        	<column name="TIME" />
+        </property>
+        
+        <many-to-one name="user" 
+        		class="ca.albertlockett.alberttwitter.model.User" lazy="false">
+        	<column name="USER_ID" length="100"/>	
+        </many-to-one>
+    </class>
+</hibernate-mapping>

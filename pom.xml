@@ -20,12 +20,28 @@
     	<artifactId>spring-webmvc</artifactId>
     	<version>4.1.6.RELEASE</version>
     </dependency>
-    
     <dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-orm</artifactId>
 		<version>4.1.6.RELEASE</version>
 	</dependency>
+    
+    
+<!-- 	<dependency> -->
+<!-- 		<groupId>org.hibernate</groupId> -->
+<!-- 		<artifactId>hibernate-validator</artifactId> -->
+<!-- 		<version>4.2.0.Final</version> -->
+<!-- 	</dependency> -->
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>3.6.6.Final</version>
+	</dependency>
+    <dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
     
     <dependency>
 		<groupId>javax.servlet</groupId>

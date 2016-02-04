@@ -7,6 +7,16 @@
 
   <display-name>Albert Twitter</display-name>
   
+  <!-- load context configurations -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/config/root-context.xml</param-value>
+  </context-param>
+  <listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  
+  
   <!-- Spring MVC dispatcher servlet -->
   <servlet>
   	<servlet-name>springDispatcherServlet</servlet-name>
@@ -39,5 +49,16 @@
     <servlet-name>springDispatcherServlet</servlet-name>
     <url-pattern>*.json</url-pattern>
   </servlet-mapping>
+  
+  <!-- open hiberate session -->
+  <filter>
+	<filter-name>openSessionInViewFilter</filter-name>
+	<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+	<filter-name>openSessionInViewFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+  </filter-mapping>
   
 </web-app>
