@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import ca.albertlockett.alberttwitter.form.LoginForm;
 import ca.albertlockett.alberttwitter.model.User;
-import ca.albertlockett.alberttwitter.service.InvalidCredentialsException;
 import ca.albertlockett.alberttwitter.service.UserService;
+import ca.albertlockett.alberttwitter.service.exception.InvalidCredentialsException;
 
 @Controller
 public class LoginController {

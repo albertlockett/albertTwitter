@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import ca.albertlockett.alberttwitter.form.RegisterUserForm;
 import ca.albertlockett.alberttwitter.model.User;
-import ca.albertlockett.alberttwitter.service.UserAlreadyExistsException;
 import ca.albertlockett.alberttwitter.service.UserService;
+import ca.albertlockett.alberttwitter.service.exception.UserAlreadyExistsException;
 
 @Controller
 public class RegistrationController {

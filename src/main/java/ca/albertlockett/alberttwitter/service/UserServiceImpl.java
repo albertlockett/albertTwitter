@@ -11,6 +11,8 @@ import ca.albertlockett.alberttwitter.dao.UserDao;
 import ca.albertlockett.alberttwitter.form.LoginForm;
 import ca.albertlockett.alberttwitter.form.RegisterUserForm;
 import ca.albertlockett.alberttwitter.model.User;
+import ca.albertlockett.alberttwitter.service.exception.InvalidCredentialsException;
+import ca.albertlockett.alberttwitter.service.exception.UserAlreadyExistsException;
 
 @Service
 public class UserServiceImpl implements UserService {

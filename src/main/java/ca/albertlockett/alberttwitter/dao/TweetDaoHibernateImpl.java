@@ -5,7 +5,6 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
-import org.springframework.core.OrderComparator.OrderSourceProvider;
 
 import ca.albertlockett.alberttwitter.model.Tweet;
 
