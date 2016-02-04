@@ -1,4 +1,4 @@
-package ca.albertlockett.security;
+package ca.albertlockett.alberttwitter.security;
 
 public class SecurityUtils {
 
