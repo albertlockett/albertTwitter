@@ -50,15 +50,30 @@
     <url-pattern>*.json</url-pattern>
   </servlet-mapping>
   
-  <!-- open hiberate session -->
-  <filter>
-	<filter-name>openSessionInViewFilter</filter-name>
-	<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
-  </filter>
+ 	 <!-- open hiberate session -->
+	 <filter>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
 
-  <filter-mapping>
-	<filter-name>openSessionInViewFilter</filter-name>
-	<url-pattern>/*</url-pattern>
-  </filter-mapping>
+	<filter>
+		<filter-name>securityFilter</filter-name>
+		<filter-class>ca.albertlockett.alberttwitter.security.SecurityFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>securityFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>securityFilter</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
   
 </web-app>

@@ -17,11 +17,6 @@ public class MainController {
 	@RequestMapping(value="home.html")
 	public String getHomePage(Model model, HttpSession session) {
 		
-		// check if user is logged in
-		if(session.getAttribute("securityPrinciple") == null) {
-			return "redirect:login.html";
-		}
-		
 		// load tweets and serve page
 		model.addAttribute("tweets", tweetService.loadTweets());
 		return "home";
