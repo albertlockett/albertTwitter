@@ -1,0 +1,10 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>Albert Twitter TLD</short-name>
+	<tag>
+		<name>TweetContent</name>
+		<tag-class>ca.albertlockett.alberttwitter.tags.TweetContent</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+</taglib>
