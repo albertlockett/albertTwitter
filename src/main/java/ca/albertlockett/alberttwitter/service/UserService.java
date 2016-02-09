@@ -11,9 +11,9 @@ public interface UserService {
 	public User registerNewUser(RegisterUserForm form) 
 			throws UserAlreadyExistsException;
 
-	
 	public User loginUser(LoginForm form) 
 			throws InvalidCredentialsException;
 	
+	public User findUserByName(String username);
 	
 }

@@ -54,7 +54,30 @@ public class UserServiceImpl implements UserService {
 		return users.get(0);
 	}
 
-	
+	public User findUserByName(String username) throws IllegalStateException, 
+			IllegalArgumentException {
+		
+		if(username == null || "".equals(username)) {
+			throw new IllegalStateException("username cannot be null");
+		}
+		
+		User query = new User();
+		query.setUsername(username);
+		List<User> users = userDao.searchUsers(query);
+		
+		if(users.size() > 1) {
+			throw new IllegalStateException("Multiple users with ID " + 
+					username);
+		}
+		
+		if(users.size() == 1) {
+			return users.get(0);
+		}
+		
+		return null;
+		
+		
+	}
 	
 	
 }

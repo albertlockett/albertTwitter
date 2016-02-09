@@ -11,45 +11,22 @@
 	<title>Albert Twitter</title>
 	<link type="text/css" rel="stylesheet" 
 		href="<spring:url value="/css/style.css"/>">
-	<link type="text/css" rel="stylesheet" 
+		<link type="text/css" rel="stylesheet" 
 		href="<spring:url value="/css/tweets.css"/>">
+	<link type="text/css" rel="stylesheet" 
+		href="<spring:url value="/css/profile.css"/>">
 </head>
 <body>
 	<a href="login.html">Logout</a>
-
-	<div id="newTweetContainer">
-		<br>
-		<form id="newTweetForm" action="newTweet.html" method="POST">
-			<table>
-				<tr>
-					<td><b>Tweet:</b></td>
-				</tr>
-				<tr>
-					<td>
-						<textarea id="tweetContent" name="content" 
-							placeholder="141 char max"maxlength="141"
-							rows="2" cols="78"></textarea>
-					</td>
-				</tr>
-				<tr>
-					<td align="right">
-						<input id="tweetButton" type="submit" value="Tweet"/>
-					</td>
-				</tr>
-			</table> 
-		</form>
-	</div> 
+	<br><br>
+	<div id="username">@${user.username}</div>
 	<br><br>
 	<div id="tweetsContainer>">
 		<c:forEach items="${tweets}" var="tweet">
 			<table class="tweetTable">
 				<tr>
 					<td>
-						<span class="username">
-							<a href="user/${tweet.user.username}.html">
-								@${tweet.user.username}
-							</a>
-						</span>
+						<span class="username">@${tweet.user.username}</span>
 						<span class="time">${tweet.time}</span>
 					</td>
 				</tr>
@@ -61,7 +38,6 @@
 				</tr>
 			</table>
 		</c:forEach>
-	
 	</div>
 </body>
 </html>
